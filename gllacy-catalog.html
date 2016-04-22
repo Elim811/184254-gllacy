@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
   <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
   <title>GllacyShop</title>
   </head>
   <body>
     <header class="main-header">
       <div class="index-logo">
-        <a href="">
+        <a href="index.html">
           <img src="img/logo.svg" width="154" height="64" alt="Gllacy">
         </a>
       </div>
@@ -15,7 +16,24 @@
         <nav class="main-navigation">
           <ul>
             <li>
-              <a href="#">Каталог</a>
+              <a >Каталог</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="#">Новинки</a>
+                  </li>
+                  <li>
+                    <a href="#">Сливочное</a>
+                  </li>
+                  <li>
+                    <a href="#">Щербеты</a>
+                   </li>
+                   <li>
+                    <a href="#">Фруктовый лед</a>
+                   </li>
+                   <li>
+                    <a href="#">Мелорин</a>
+                  </li>
+                </ul>
             </li>
             <li>
               <a href="#">Доставка и оплата</a>
@@ -28,83 +46,89 @@
         <div class="user-block">
           <ul>
             <li>
-              <a class="find" href="#">
-                <img src="img/find.svg" width="17" height="17" alt="Поиск">
-              </a>
+              <div class="find">Поиск</div>
               <form action="#" method="get">
                 <input type="text" placeholder="Что ищем?">
               </form>
             </li>
             <li>
-              <a class="login" href="#">
-                <img src="img/enter.svg" width="17" height="17" alt="Вход">Вход
-              </a>
+              <div class="enter">Вход</div>
               <form action="#" method="post">
                 <input type="email" placeholder="Электронная почта">
                 <input type="password" placeholder="Пароль">
-                <button>Войти</button>
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
+                <button type="button">Войти</button>
+                <div class="login">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
               </form>
             </li>
             <li>
-              <a class="basket" href="#">
-              <img src="img/basket.svg" width="17" height="17" alt="Корзина">2 товара
-              </a>
+              <div class="basket">
+                <span id="quantity">2</span>
               <div class="full">
                 <table>
                   <tr>
                     <td>
                       <button type="button"></button>
+                    </td>
                     <td>
                       <img src="img/1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    </td>
                     <td>Пломбир с апельсиновым джемом</td>
                     <td>
-                      <div>
-                        <span class="number-weight">1,5
-                        </span>
-                        <span class="weight-unit">кг
-                        </span>х
-                        <span class="number-money">200
-                        </span>
-                        <span class="money-unit">руб.
-                        </span>
-                      </div>
+                      <span class="number-weight">1,5
+                      </span>
+                      <span class="weight-unit">кг
+                      </span>х
+                      <span class="number-money">200
+                      </span>
+                      <span class="money-unit">руб.
+                      </span>
                     </td>
-                    <td>300руб</td>
+                    <td>
+                      <span id="amount1">300
+                      </span>
+                      <span class="money-unit">руб.
+                      </span>
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <button type="button"></button>
+                    </td>
                     <td>
                       <img src="img/3.png" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    </td>
                     <td>Сливочно-клубничное с присыпкой из белого шоколада</td>
                     <td>
-                      <div>
-                        <span class="number-weight">1,5
-                        </span>
-                        <span class="weight-unit">кг
-                        </span>х
-                        <span class="number-money">300
-                        </span>
-                        <span class="money-unit">руб.
-                        </span>
-                      </div>
+                      <span class="number-weight">1,5
+                      </span>
+                      <span class="weight-unit">кг
+                      </span>х
+                      <span class="number-money">300
+                      </span>
+                      <span class="money-unit">руб.
+                      </span>
                     </td>
-                    <td>450руб</td>
+                    <td>
+                      <span id="amount2">450
+                      </span>
+                      <span class="money-unit">руб.
+                      </span>
+                    </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div>
-                        <span class="total">Итого:
-                        </span>
-                        <span class="total-number">750 руб.
-                        </span>
-                      </div>
+                    <td colspan="5">
+                      <span class="total">Итого:
+                      </span>
+                      <span class="total-number">750 руб.
+                      </span>
                     </td>
                   </tr>
                 </table>
-                <a href="#">Оформить заказ</a>
+                <a class="order" href="#">Оформить заказ</a>
+              </div>
               </div>
             </li>
           </ul>
@@ -126,16 +150,15 @@
         </li> <!--показать стилизацию без href-->
       </ul>
       <h1>Сливочное мороженое</h1>
-      <form action="#" method="post">
+      <form class="choose" action="#" method="post">
         <div class="sorting">
-          <label>Сортировка:<br>
+          <h2>Сортировка:</h2>
             <select>
               <option>по популярности</option>
               <option>сначала недорогие</option>
               <option>сначала дорогие</option>
               <option>по жирности</option>
             </select>
-          </label>
         </div>
         <div class="price">
           <div class="price-title">
@@ -164,52 +187,52 @@
               </li>
               <li>
                 <label>
-                  <input type="radio" name="fat" value="less 10" checked>до 10%
+                  <input type="radio" name="fat" value="less10" checked>до 10%
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="radio" name="fat" value="less 30">до 30%
+                  <input type="radio" name="fat" value="less30">до 30%
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="radio" name="fat" value="more 30">выше 30%
+                  <input type="radio" name="fat" value="more30">выше 30%
                 </label>
               </li>
             </ul>
-             </div>
+        </div>
         <div class="fillers">
           <span>Наполнители:</span>
             <ul>
               <li>
                 <label>
-                  <input type="checkbox" name="fillers" value="choko" checked>шоколадные
+                  <input type="checkbox" name="choko" checked>шоколадные
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="fillers" value="sugar" checked>сахарные присыпки
+                  <input type="checkbox" name="sugar" checked>сахарные присыпки
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="fillers" value="fruits">фрукты
+                  <input type="checkbox" name="fruits">фрукты
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="fillers" value="syrups">сиропы
+                  <input type="checkbox" name="syrups">сиропы
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="fillers" value="jams">джемы
+                  <input type="checkbox" name="jams">джемы
                 </label>
               </li>
             </ul>
         </div>
-        <button>"Применить"</button>
+        <button type="submit">"Применить"</button>
       </form>
       <article class="item">
         <ul>
@@ -219,11 +242,11 @@
             </a>
             <div class="price">
               <span>310</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -231,11 +254,11 @@
             </a>
             <div class="price">
               <span>380</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Слично-кофейное с кусочками шоколада</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -243,11 +266,11 @@
             </a>
             <div class="price">
               <span>355</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -255,11 +278,11 @@
             </a>
             <div class="price">
               <span>415</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -267,11 +290,11 @@
             </a>
             <div class="price">
               <span>325</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное c брусничным кремом</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -279,11 +302,11 @@
             </a>
             <div class="price">
               <span>410</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочно-черничное с цельными ягодами черники</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -291,11 +314,11 @@
             </a>
             <div class="price">
               <span>375</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -303,11 +326,11 @@
             </a>
             <div class="price">
               <span>320</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное с шоколадной стружкой</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -315,11 +338,11 @@
             </a>
             <div class="price">
               <span>440</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
            <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-           <button>Быстрый просмотр</button>
+           <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -327,11 +350,11 @@
             </a>
             <div class="price">
               <span>435</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное с ментоловым сиропом</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -339,11 +362,11 @@
             </a>
             <div class="price">
               <span>355</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное с кусочками черного шоколада</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
           <li>
             <a href="#">
@@ -351,11 +374,11 @@
             </a>
             <div class="price">
               <span>420</span>
-              <span>Р</span>
+              <span class="rub">Р</span>
               <span>&#47;кг</span>
             </div>
             <a href="#">Сливочное с мятным сиропом</a>
-            <button>Быстрый просмотр</button>
+            <a class="view" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </article>
