@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>GllacyShop</title>
   </head>
   <body>
@@ -51,39 +51,34 @@
           </ul>
         </nav>
         <div class="user-block">
-          <ul>
-            <li>
-              <div class="find-block">
-                <div class="find">Поиск</div>
-                <form class="find-form" action="#" method="get">
-                  <input  type="text" id="find-field" required>
-                  <label for="find-field">Что ищем?</label>
-                </form>
-              </div>
-            </li>
-            <li>
-              <div class="enter-block">
-                <div class="enter">Вход</div>
-                <form class="enter-form" action="#" method="post">
-                  <ul>
-                    <li class="enter-content-li">
-                      <input type="text" id="enter-mail" required>
-                      <label for="enter-mail">Электронная почта</label>
-                    </li>
-                    <li class="enter-content-li">
-                      <input type="password" id="enter-password" required>
-                      <label for="enter-password">Пароль</label>
-                    </li>
-                  </ul>
-                  <button type="submit">Войти</button>
-                  <div class="login">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </div>
-                </form>
-              </div>
-            </li>
-            <li>
+            <div class="full-user-block find-block">
+              <div class="find">Поиск</div>
+              <form class="find-form" action="#" method="get">
+                <input  type="text" id="find-field" required>
+                <label for="find-field">Что ищем?</label>
+              </form>
+            </div>
+            <div class="full-user-block enter-block">
+              <div class="enter">Вход</div>
+              <form class="enter-form" action="#" method="post">
+                <ul>
+                  <li class="enter-content-li">
+                    <input type="text" id="enter-mail" required>
+                    <label for="enter-mail">Электронная почта</label>
+                  </li>
+                  <li class="enter-content-li">
+                  <input type="password" id="enter-password" required>
+                  <label for="enter-password">Пароль</label>
+                  </li>
+                </ul>
+                <button type="submit">Войти</button>
+                <div class="login">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </div>
+              </form>
+            </div>
+              <div class="full-user-block">
               <div class="basket">
                 <div class="basket basket-full">
                   <span class="quantity" id="quantity">2 товара</span>
@@ -154,8 +149,7 @@
                     <a class="order" href="#">Оформить заказ</a>
                   </div>
               </div>
-            </li>
-          </ul>
+            </div>
         </div>
         <div class="info1">
           <div class="open-hours">С 10 до 20, ежедневно</div>
@@ -461,8 +455,8 @@
         </div>
       </main>
     </div>
-    <footer class="main-footer">
-      <div class="container main-footer-line clearfix">
+    <footer class="main-footer main-footer-line">
+      <div class="container clearfix">
         <section class="footer-social">
           <ul>
             <li>
@@ -480,28 +474,22 @@
           </ul>
         </section>
         <section class="footer-info">
-          <ul>
-            <li>
-              <a class="heart" href="#">
-                <p>Для поставщиков</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p> Наши документы</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p>О производстве</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p>Экологические стандарты</p>
-              </a>
-            </li>
-          </ul>
+          <div class="footer-info-left"> 
+            <a class="heart" href="#">
+              Для&nbsp;поставщиков
+            </a>
+            <a href="#">
+              О&nbsp;производстве
+            </a>
+          </div>  
+          <div class="footer-info-right">      
+            <a href="#">
+               Наши&nbsp;документы
+            </a>        
+            <a href="#">
+               Экологические&nbsp;стандарты
+            </a>
+          </div> 
         </section>
         <section class="footer-copyright">
           <img src="img/logo-ac.svg" width="108" height="37"  alt="html academy">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>GllacyShop</title>
   </head>
   <body>
@@ -55,42 +55,36 @@
             </ul>
           </nav>
           <div class="user-block">
-            <ul>
-              <li>
-                <div class="find-block">
-                  <div class="find">Поиск</div>
-                  <form class="find-form" action="#" method="get">
-                    <input  type="text" id="find-field" required>
-                    <label for="find-field">Что ищем?</label>
-                  </form>
+            <div class="full-user-block find-block">
+              <div class="find">Поиск</div>
+              <form class="find-form" action="#" method="get">
+                <input  type="text" id="find-field" required>
+                <label for="find-field">Что ищем?</label>
+              </form>
+            </div>
+            <div class="full-user-block enter-block">
+              <div class="enter">Вход</div>
+              <form class="enter-form" action="#" method="post">
+                <ul>
+                  <li class="enter-content-li">
+                    <input type="text" id="enter-mail" required>
+                    <label for="enter-mail">Электронная почта</label>
+                  </li>
+                  <li class="enter-content-li">
+                  <input type="password" id="enter-password" required>
+                  <label for="enter-password">Пароль</label>
+                  </li>
+                </ul>
+                <button type="submit">Войти</button>
+                <div class="login">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
                 </div>
-              </li>
-              <li>
-              <div class="enter-block">
-                <div class="enter">Вход</div>
-                <form class="enter-form" action="#" method="post">
-                  <ul>
-                    <li class="enter-content-li">
-                      <input type="text" id="enter-mail" required>
-                      <label for="enter-mail">Электронная почта</label>
-                   </li>
-                   <li class="enter-content-li">
-                    <input type="password" id="enter-password" required>
-                    <label for="enter-password">Пароль</label>
-                   </li>
-                  </ul>
-                  <button type="submit">Войти</button>
-                  <div class="login">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </div>
-                </form>
-              </div>
-              </li>
-              <li>
-                <div class="basket basket-empty">Пусто</div>
-              </li>
-            </ul>
+              </form>
+            </div>
+            <div class="full-user-block">
+              <div class="basket basket-empty">Пусто</div>
+            </div>
           </div>
           <div class="info1">
             <div class="open-hours">С 10 до 20, ежедневно</div>
@@ -124,7 +118,7 @@
                    мороженого, добавим в ваш заказ банку
                    малинового варенья бесплатно.
               </p>
-              <a  href="#">Хочу варенье!</a>
+              <a href="#">Хочу варенье!</a>
             </div>
             <div class="right-column">
               <h2>Шоколадки даром!</h2>
@@ -315,28 +309,22 @@
         </ul>
         </section>
         <section class="footer-info">
-          <ul>
-            <li>
-              <a class="heart" href="#">
-                <p>Для поставщиков</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p> Наши документы</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p>О производстве</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <p>Экологические стандарты</p>
-              </a>
-            </li>
-          </ul>
+          <div class="footer-info-left"> 
+            <a class="heart" href="#">
+              Для&nbsp;поставщиков
+            </a>
+            <a href="#">
+              О&nbsp;производстве
+            </a>
+          </div>  
+          <div class="footer-info-right">      
+            <a href="#">
+               Наши&nbsp;документы
+            </a>        
+            <a href="#">
+               Экологические&nbsp;стандарты
+            </a>
+          </div> 
         </section>
         <section class="footer-copyright">
           <img src="img/logo-ac.svg" width="108" height="37" alt="html academy">
@@ -362,9 +350,9 @@
           </li>
           <li class="modal-content-li">
             <textarea  id="comment-field" required></textarea>
-    		    <label for="comment-field">Напишите что-нибудь...</label>
+            <label for="comment-field">Напишите что-нибудь...</label>
           </li>
-    	  </ul>
+        </ul>
         <button class="button-send" type="submit">Отправить</button>
       </form>
     </div>
